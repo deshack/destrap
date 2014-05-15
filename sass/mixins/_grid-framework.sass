@@ -1,0 +1,38 @@
+/**
+ * Destrap Grid Framework
+ *
+ * Handles grid generation.
+ * 
+ * @project 	Destrap
+ * @section 	Grid Framework
+ */
+
+=make-grid-columns()
+	@each $num, $width in $cols
+		.col-#{$num}
+			@extend .col
+			width: $width
+			@if $num == 12
+				margin-right: 0
+
+=make-empty-columns()
+	@each $num, $width in $cols
+		.append-#{$num}
+			margin-right: $width + $gutter
+		.prepend-#{$num}
+			margin-left: $width + $gutter
+
+=make-push-pull()
+	@each $num, $margin in $cols
+		.pull-#{$num}
+			@extend .pull
+			@if $num == 1
+				margin-left: -$margin
+			@else
+				margin-left: -($margin + $gutter)
+		.push-#{$num}
+			@extend .push
+			@if $num == 1
+				margin: 0 (-($margin + $gutter)) 0 ($margin + $gutter)
+			@else
+				margin: 0 (-($margin + ($gutter * 2))) 0 ($margin + ($gutter * 2))
