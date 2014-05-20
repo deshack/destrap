@@ -24,12 +24,12 @@
 		@warn "`#{$device}` is not an accepted device."
 
 =make-grid-columns-small()
-	@for $i from 1 through $grid-columns
+	.col-1
+		width: percentage(1 / ($grid-columns / 4))
+	@for $i from 2 through $grid-columns
 		.col-#{$i}
-			@if ($i % ($grid-columns / 3)) == 0
-				width: 100%
-			@else
-				width: percentage(($i % ($grid-columns / 3)) / ($grid-columns / 3))
+			width: 100%
+			+clearfix
 
 =make-grid-columns-mid()
 	@for $i from 1 through $grid-columns
@@ -43,6 +43,20 @@
 	@for $i from 1 through $grid-columns
 		.col-#{$i}
 			width: percentage($i / $grid-columns)
+
+=make-row()
+	margin-left: ($gutter / -2)
+	margin-right: ($gutter / -2)
+	+clearfix
+
+=make-container($type: 'fluid')
+	@if $type == 'fluid'
+		margin-right: auto
+		margin-left: auto
+		padding-left: ($gutter / 2)
+		padding-right: ($gutter / 2)
+		+clearfix
+
 =make-empty-columns()
 //	@each $num, $width in $cols
 		.append-#{$num}

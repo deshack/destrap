@@ -1,0 +1,9 @@
+@import "../sass/partials/variables"
+
+=make-grid-background()
+	@for $i from 1 to $grid-columns
+		.col-#{$i}
+			background-color: $grey
+			border: 1px solid darken($grey, 10%)
+
++make-grid-background

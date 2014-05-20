@@ -29,6 +29,7 @@
 	position: relative
 	padding-left: ($gutter / 2)
 	padding-right: ($gutter / 2)
+	// Prevent columns from collapsing when empty
 	min-height: 1px
 	float: left
 
@@ -42,3 +43,13 @@
 
 @media (min-width: $screen-lg-min)
 	+grid-columns-width('desktop')
+
+//--------------------------------------------------
+// Main containers
+//--------------------------------------------------
+
+.container
+	+make-container
+
+.row
+	+make-row
