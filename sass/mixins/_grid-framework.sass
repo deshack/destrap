@@ -1,29 +1,57 @@
-/**
- * Destrap Grid Framework
- *
- * Handles grid generation.
- * 
- * @project 	Destrap
- * @section 	Grid Framework
- */
+//--------------------------------------------------
+// Destrap Grid Framework
+//
+// Handles grid generation.
+//
+// @project Destrap
+// @section Grid Framework
+//--------------------------------------------------
 
 =make-grid-columns()
-	@each $num, $width in $cols
-		.col-#{$num}
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
 			@extend .col
-			width: $width
-			@if $num == 12
-				margin-right: 0
 
+=grid-columns-width($device)
+	@if index($grid-devices, $device)
+		@if index($grid-devices, $device) == 1
+			+make-grid-columns-small
+		@else if index($grid-devices, $device) == 2
+			+make-grid-columns-mid
+		@else if index($grid-devices, $device) == 3
+			+make-grid-columns-large
+	@else
+		@warn "`#{$device}` is not an accepted device."
+
+=make-grid-columns-small()
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
+			@if ($i % ($grid-columns / 3)) == 0
+				width: 100%
+			@else
+				width: percentage(($i % ($grid-columns / 3)) / ($grid-columns / 3))
+
+=make-grid-columns-mid()
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
+			@if ($i % ($grid-columns / 2)) == 0
+				width: 100%
+			@else
+				width: percentage(($i % ($grid-columns / 2)) / ($grid-columns / 2))
+
+=make-grid-columns-large()
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
+			width: percentage($i / $grid-columns)
 =make-empty-columns()
-	@each $num, $width in $cols
+//	@each $num, $width in $cols
 		.append-#{$num}
 			margin-right: $width + $gutter
 		.prepend-#{$num}
 			margin-left: $width + $gutter
 
 =make-push-pull()
-	@each $num, $margin in $cols
+//	@each $num, $margin in $cols
 		.pull-#{$num}
 			@extend .pull
 			@if $num == 1

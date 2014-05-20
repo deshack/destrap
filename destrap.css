@@ -14,20 +14,6 @@
  * @project 	Destrap
  * @section 	Variables
  */
-/*
- * Destrap Mixins
- *
- * @project 	Destrap
- * @section 	Mixins
- */
-/*
- * Destrap Grid Framework
- *
- * Handles grid generation.
- * 
- * @project 	Destrap
- * @section 	Grid Framework
- */
 /*! normalize.css v3.0.1 | MIT License | git.io/normalize */
 html {
   font-family: sans-serif;
@@ -207,318 +193,151 @@ th {
   padding: 0; }
 
 /*
- * Destrap Grid Framework
- *
- * Grid file part of the Destrap Front-End Framework.
- *
- * This grid is composed by 14 columns (units) separated by 13 gutters (1/3 unit).
- * The first and last column are for padding purposes only.
- * The content fits in the middle 12 columns.
- * Possible divisions: 1 (12 units + 11 gutters), 2 (6 units + 5 gutters),
- * 3 (4 units + 3 gutters) and 4 (3 units + 2 gutters).
- *
- * When 1 unit = 60px, 1 gutter = 20px
- *
- * @project 	Destrap
- * @section 	Grid
- * @author 		Mattia Migliorini (deshack) <deshack@ubuntu.com>
- * @copyright 	2014 Mattia Migliorini
- *
- * @see 		http://gridinator.com
- */
-/*
- * Table of contents
- *
- * - Main containers
- * - Columns
- * - Empty columns
- * - Borders
- * - Push and pull
- * - Vertical gutter
- * - Last
- * - Clearing
- */
-.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  clear: none;
-  display: inline-block;
-  float: left;
-  margin-right: 2.12766%;
-  margin-bottom: 20px;
-  padding: 0;
-  position: relative; }
-
-.col-1 {
-  width: 6.38297%; }
-
-.col-2 {
-  width: 14.89361%; }
-
-.col-3 {
-  width: 23.40425%; }
-
-.col-4 {
-  width: 31.91489%; }
-
-.col-5 {
-  width: 40.42553%; }
-
-.col-6 {
-  width: 48.93617%; }
-
-.col-7 {
-  width: 57.4468%; }
-
-.col-8 {
-  width: 65.95744%; }
-
-.col-9 {
-  width: 74.46808%; }
-
-.col-10 {
-  width: 82.97872%; }
-
-.col-11 {
-  width: 91.48936%; }
-
-.col-12 {
-  width: 100%;
-  margin-right: 0; }
-
-.row {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  border-bottom: 1px dotted #aea79f;
-  clear: both;
-  position: relative;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
-  margin: 0;
-  padding: 40px 40px 20px; }
-  .row:after {
-    content: ".";
-    visibility: hidden;
-    display: block;
-    height: 0;
-    clear: both; }
-
-.container {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 20px 20px 0;
-  width: 100%; }
-
-/*
- * Empty columns
- *
- * Add these to a column to append o prepend
- * empty columns
- */
-.append-1 {
-  margin-right: 8.51063%; }
-
-.prepend-1 {
-  margin-left: 8.51063%; }
-
-.append-2 {
-  margin-right: 17.02127%; }
-
-.prepend-2 {
-  margin-left: 17.02127%; }
-
-.append-3 {
-  margin-right: 25.53191%; }
-
-.prepend-3 {
-  margin-left: 25.53191%; }
-
-.append-4 {
-  margin-right: 34.04255%; }
-
-.prepend-4 {
-  margin-left: 34.04255%; }
-
-.append-5 {
-  margin-right: 42.55319%; }
-
-.prepend-5 {
-  margin-left: 42.55319%; }
-
-.append-6 {
-  margin-right: 51.06383%; }
-
-.prepend-6 {
-  margin-left: 51.06383%; }
-
-.append-7 {
-  margin-right: 59.57446%; }
-
-.prepend-7 {
-  margin-left: 59.57446%; }
-
-.append-8 {
-  margin-right: 68.0851%; }
-
-.prepend-8 {
-  margin-left: 68.0851%; }
-
-.append-9 {
-  margin-right: 76.59574%; }
-
-.prepend-9 {
-  margin-left: 76.59574%; }
-
-.append-10 {
-  margin-right: 85.10638%; }
-
-.prepend-10 {
-  margin-left: 85.10638%; }
-
-.append-11 {
-  margin-right: 93.61702%; }
-
-.prepend-11 {
-  margin-left: 93.61702%; }
-
-.append-12 {
-  margin-right: 102.12766%; }
-
-.prepend-12 {
-  margin-left: 102.12766%; }
-
-/*
- * Push and pull
- *
- * Use these classes to push elements into the next column
- * and pull it into the previous column.
- */
-.pull, .pull-1, .pull-2, .pull-3, .pull-4, .pull-5, .pull-6, .pull-7, .pull-8, .pull-9, .pull-10, .pull-11, .pull-12,
-.push,
-.push-1,
-.push-2,
-.push-3,
-.push-4,
-.push-5,
-.push-6,
-.push-7,
-.push-8,
-.push-9,
-.push-10,
-.push-11,
-.push-12 {
-  float: left;
-  position: relative; }
-
-.pull-1 {
-  margin-left: -6.38297%; }
-
-.push-1 {
-  margin: 0 -8.51063% 0 8.51063%; }
-
-.pull-2 {
-  margin-left: -17.02127%; }
-
-.push-2 {
-  margin: 0 -19.14893% 0 19.14893%; }
-
-.pull-3 {
-  margin-left: -25.53191%; }
-
-.push-3 {
-  margin: 0 -27.65957% 0 27.65957%; }
-
-.pull-4 {
-  margin-left: -34.04255%; }
-
-.push-4 {
-  margin: 0 -36.17021% 0 36.17021%; }
-
-.pull-5 {
-  margin-left: -42.55319%; }
-
-.push-5 {
-  margin: 0 -44.68085% 0 44.68085%; }
-
-.pull-6 {
-  margin-left: -51.06383%; }
-
-.push-6 {
-  margin: 0 -53.19149% 0 53.19149%; }
-
-.pull-7 {
-  margin-left: -59.57446%; }
-
-.push-7 {
-  margin: 0 -61.70212% 0 61.70212%; }
-
-.pull-8 {
-  margin-left: -68.0851%; }
-
-.push-8 {
-  margin: 0 -70.21276% 0 70.21276%; }
-
-.pull-9 {
-  margin-left: -76.59574%; }
-
-.push-9 {
-  margin: 0 -78.7234% 0 78.7234%; }
-
-.pull-10 {
-  margin-left: -85.10638%; }
-
-.push-10 {
-  margin: 0 -87.23404% 0 87.23404%; }
-
-.pull-11 {
-  margin-left: -93.61702%; }
-
-.push-11 {
-  margin: 0 -95.74468% 0 95.74468%; }
-
-.pull-12 {
-  margin-left: -102.12766%; }
-
-.push-12 {
-  margin: 0 -104.25532% 0 104.25532%; }
-
-.border {
-  border-right: 1px solid #dddddd;
-  margin-right: 10px;
-  padding-right: 0.5625em; }
-
-/*
- * Vertical gutter
- *
- * Add a gutter above or below an element.
- */
-div.prepend-top, .prepend-top {
-  margin-top: 20px; }
-
-div.append-bottom, .append-bottom {
-  margin-bottom: 20px; }
-
-/*
- * Last
- *
- * Removes right margin from the last column in a row.
- */
-.last-col, .last {
-  margin-right: 0; }
-
-/*
  * Destrap Scaffolding
  *
  * @project 	Destrap
  * @section 	Scaffolding
  */
-html {
-  background: #f7f7f7; }
+body {
+  background-color: #f7f7f7;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  color: #333333; }
 
+/*
+ * Destrap Typography
+ *
+ * @project 	Destrap
+ * @section 	Typography
+ */
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  font-family: inherit;
+  font-weight: 500;
+  line-height: 1.1;
+  color: inherit; }
+
+.col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-background-clip: padding-box !important;
+  -moz-background-clip: padding-box !important;
+  background-clip: padding-box !important;
+  position: relative;
+  padding-left: 1%;
+  padding-right: 1%;
+  min-height: 1px;
+  float: left; }
+
+@media (max-width: 767px) {
+  .col-1 {
+    width: 25%; }
+
+  .col-2 {
+    width: 50%; }
+
+  .col-3 {
+    width: 75%; }
+
+  .col-4 {
+    width: 100%; }
+
+  .col-5 {
+    width: 25%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 75%; }
+
+  .col-8 {
+    width: 100%; }
+
+  .col-9 {
+    width: 25%; }
+
+  .col-10 {
+    width: 50%; }
+
+  .col-11 {
+    width: 75%; }
+
+  .col-12 {
+    width: 100%; } }
+@media (min-width: 768px) and (max-width: 1023px) {
+  .col-1 {
+    width: 16.66667%; }
+
+  .col-2 {
+    width: 33.33333%; }
+
+  .col-3 {
+    width: 50%; }
+
+  .col-4 {
+    width: 66.66667%; }
+
+  .col-5 {
+    width: 83.33333%; }
+
+  .col-6 {
+    width: 100%; }
+
+  .col-7 {
+    width: 16.66667%; }
+
+  .col-8 {
+    width: 33.33333%; }
+
+  .col-9 {
+    width: 50%; }
+
+  .col-10 {
+    width: 66.66667%; }
+
+  .col-11 {
+    width: 83.33333%; }
+
+  .col-12 {
+    width: 100%; } }
+@media (min-width: 1024px) {
+  .col-1 {
+    width: 8.33333%; }
+
+  .col-2 {
+    width: 16.66667%; }
+
+  .col-3 {
+    width: 25%; }
+
+  .col-4 {
+    width: 33.33333%; }
+
+  .col-5 {
+    width: 41.66667%; }
+
+  .col-6 {
+    width: 50%; }
+
+  .col-7 {
+    width: 58.33333%; }
+
+  .col-8 {
+    width: 66.66667%; }
+
+  .col-9 {
+    width: 75%; }
+
+  .col-10 {
+    width: 83.33333%; }
+
+  .col-11 {
+    width: 91.66667%; }
+
+  .col-12 {
+    width: 100%; } }
 /*
  * Utilities
  *
@@ -530,7 +349,7 @@ html {
  *
  * Hard and soft clearing classes.
  */
-.clearfix:after, .container:after {
+.clearfix:after {
   clear: both;
   content: "\0020";
   display: block;
@@ -550,50 +369,14 @@ html {
  * @project 	Destrap
  * @section 	Navbar
  */
-header.navbar {
-  background-color: #dd4814;
+.navbar {
   position: relative;
-  z-index: 2;
-  width: 100%;
-  margin-bottom: 20px;
-  display: inline-block;
-  border-top: 0;
-  -webkit-box-shadow: inset 0 2px 2px -2px #777777, 2px 1px white;
-  -moz-box-shadow: inset 0 2px 2px -2px #777777, 2px 1px white;
-  box-shadow: inset 0 2px 2px -2px #777777, 2px 1px white; }
-  header.navbar .nav-primary {
-    border: 0;
-    margin: 0 auto;
-    overflow: hidden;
-    width: 984px; }
-    header.navbar .nav-primary ul {
-      border-right: 1px solid #ed6637;
-      float: left;
-      margin: 0;
-      position: relative; }
-      header.navbar .nav-primary ul li:last-child {
-        border-right: 1px solid #c64012; }
-    header.navbar .nav-primary li {
-      border-left: 1px solid #c64012;
-      float: left;
-      list-style-image: none;
-      margin: 0;
-      text-indent: 0;
-      vertical-align: bottom; }
-      header.navbar .nav-primary li a, header.navbar .nav-primary li a:link, header.navbar .nav-primary li a:visited {
-        font-size: 14px;
-        border-left: 1px solid #ec5b29;
-        color: white;
-        display: block;
-        margin-bottom: 0;
-        padding: 12px 14px 14px;
-        position: relative;
-        text-align: center;
-        text-decoration: none;
-        -webkit-font-smoothing: subpixel-antialiased;
-        -moz-font-smoothing: subpixel-antialiased;
-        -o-font-smoothing: subpixel-antialiased;
-        font-smoothing: subpixel-antialiased; }
-      header.navbar .nav-primary li a.active, header.navbar .nav-primary li a:active {
-        background: #ae3910;
-        border-left: 1px solid #ec5b29; }
+  min-height: 80px;
+  margin-bottom: 22px;
+  border: 1px solid transparent;
+  *zoom: 1; }
+  .navbar:before, .navbar:after {
+    content: "";
+    display: table; }
+  .navbar:after {
+    clear: both; }

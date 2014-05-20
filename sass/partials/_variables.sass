@@ -11,36 +11,71 @@
 
 // Standard colors
 // @colordef standard colors
-$orange:			#dd4814
-$orange_light:		#fdf6f2
-$grey_dark:			#333333
-$grey_warm:			#aea79f
-$grey:				#dddddd
-$grey_light:		#c2c2c2
-$grey_lighter:		#f7f7f7
+$orange:			#dd4814 !default
+$orange-light:		#fdf6f2 !default
+$grey-dark:			#333333 !default
+$grey-warm:			#aea79f !default
+$grey:				#dddddd !default
+$grey-light:		#c2c2c2 !default
+$grey-lighter:		#f7f7f7 !default
 
 // Define base color
-$base_color:		$orange
+$base-color:		$orange !default
+
+$body-bg:			$grey-lighter !default
+$text-color:		$grey-dark !default
 
 // Status
-$error:				#df382c // Red
-$warning:			#eca918 // Yellow
-$success:			#38b44a // Green
-$info:				#19b6ee // Cyan
-$disabled:			$grey_warm
+$error:				#df382c !default
+$warning:			#eca918 !default
+$success:			#38b44a !default
+$info:				#19b6ee !default
+$disabled:			$grey-warm !default
 
 // Links
-$link_color:		$base_color
+$link-color:		$base-color !default
+
+//--------------------------------------------------
+// Typography
+//--------------------------------------------------
+//
+// Font, line-height, and color for body text, headings and more.
+$font-family-base:		"Helvetica Neue", Helvetica, Arial, sans-serif !default
+$font-family-monospace:	Menlo, Monaco, Consolas, "Courier New", monospace !default
+
+$base:					16 !default
+$font-size-base:		($base)+px !default
+
+// Unit-less line-height (20/14) for use in components like buttons.
+$line-height-base:		1.428571429 !default
+// Computed line-height (~20px) for use with margin, padding, etc.
+$line-height-computed:	floor(($base * $line-height-base))+px !default
+
+// Headings
+$headings-font-family:	inherit !default
+$headings-font-weight:	500 !default
+$headings-line-height:	1.1 !default
+$headings-color:		inherit !default
 
 //--------------------------------------------------
 // Grid
 //--------------------------------------------------
 
-$base:				16
-$gutter_width:		20px
-$grid_gutter:		20px
-$gutter:			2.12766%
+// Number of columns in the grid.
+$grid-columns:			12 !default
+// Padding between columns. Gets divided in half for the left and right.
+$gutter:				2% !default
+// Accepted grid devices. Used to handle grid floating.
+$grid-devices:			'smartphone', 'tablet', 'desktop'
 
-// Cols map
-// Defines cols width.
-$cols: ( 1: 6.38297%, 2: 14.89361%, 3: 23.40425%, 4: 31.91489%, 5: 40.42553%, 6: 48.93617%, 7: 57.4468%, 8: 65.95744%, 9: 74.46808%, 10: 82.97872%, 11: 91.48936%, 12: 100% )
+$screen-sm-max:			767px !default
+$screen-md-min:			768px !default
+$screen-md-max:			1023px !default
+$screen-lg-min:			1024px !default
+
+//--------------------------------------------------
+// Navbar
+//--------------------------------------------------
+
+$navbar-height:			80px !default
+$navbar-margin-bottom:	$line-height-computed !default
