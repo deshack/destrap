@@ -1,9 +1,15 @@
 @import "../sass/partials/variables"
 
-=make-grid-background()
+=make-grid-background($color: $grey)
 	@for $i from 1 to $grid-columns
 		.col-#{$i}
-			background-color: $grey
-			border: 1px solid darken($grey, 10%)
+			background-color: $color
+			border: 1px solid darken($color, 10%)
+			text-align: center
+			padding-top: ($gutter / 2)
+			padding-bottom: ($gutter / 2)
 
 +make-grid-background
+
+[class*='col-']
+	+make-grid-background($grey-warm)

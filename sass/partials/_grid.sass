@@ -35,15 +35,6 @@
 
 +make-grid-columns
 
-@media (max-width: $screen-sm-max)
-	+grid-columns-width('smartphone')
-
-@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
-	+grid-columns-width('tablet')
-
-@media (min-width: $screen-lg-min)
-	+grid-columns-width('desktop')
-
 //--------------------------------------------------
 // Main containers
 //--------------------------------------------------
@@ -51,5 +42,23 @@
 .container
 	+make-container
 
+// Rows are required as a wrapper for every col-* row.
 .row
 	+make-row
+
+//--------------------------------------------------
+// Empty columns
+//--------------------------------------------------
+
++make-empty-columns
+
+//--------------------------------------------------
+// Push and pull
+//--------------------------------------------------
+
+.pull,
+.push
+	float: left
+	position: relative
+
++make-offset

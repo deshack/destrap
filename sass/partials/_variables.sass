@@ -64,7 +64,8 @@ $headings-color:		inherit !default
 // Number of columns in the grid.
 $grid-columns:			12 !default
 // Padding between columns. Gets divided in half for the left and right.
-$gutter:				2% !default
+// Using percent value here would break nesting of columns.
+$gutter:				30px !default
 // Accepted grid devices. Used to handle grid floating.
 $grid-devices:			'smartphone', 'tablet', 'desktop'
 
