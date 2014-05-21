@@ -1,38 +1,165 @@
-/**
- * Destrap Grid Framework
- *
- * Handles grid generation.
- * 
- * @project 	Destrap
- * @section 	Grid Framework
- */
+//--------------------------------------------------
+// Destrap Grid Framework
+//
+// Handles grid generation.
+//
+// @project Destrap
+// @section Grid Framework
+//--------------------------------------------------
 
 =make-grid-columns()
-	@each $num, $width in $cols
-		.col-#{$num}
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
 			@extend .col
-			width: $width
-			@if $num == 12
-				margin-right: 0
+	@media (max-width: $screen-sm-max)
+		+make-grid-columns-small
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		+make-grid-columns-mid
+	@media (min-width: $screen-lg-min)
+		+make-grid-columns-large
 
+=make-grid-columns-small()
+	.col-1
+		width: percentage(1 / ($grid-columns / 4))
+	@for $i from 2 through $grid-columns
+		.col-#{$i}
+			width: 100%
+
+=make-grid-columns-mid()
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
+			@if ($i % ($grid-columns / 2)) == 0
+				width: 100%
+			@else
+				width: percentage(($i % ($grid-columns / 2)) / ($grid-columns / 2))
+
+=make-grid-columns-large()
+	@for $i from 1 through $grid-columns
+		.col-#{$i}
+			width: percentage($i / $grid-columns)
+
+//--------------------------------------------------
+// Containers
+//--------------------------------------------------
+=make-row()
+	margin-left: ($gutter / -2)
+	margin-right: ($gutter / -2)
+	+clearfix
+
+=make-container($type: 'fluid')
+	margin-right: auto
+	margin-left: auto
+	padding: ($gutter / 2)
+	+clearfix
+
+//--------------------------------------------------
+// Empty columns
+//--------------------------------------------------
 =make-empty-columns()
-	@each $num, $width in $cols
-		.append-#{$num}
-			margin-right: $width + $gutter
-		.prepend-#{$num}
-			margin-left: $width + $gutter
+	+make-append
+	+make-prepend
 
-=make-push-pull()
-	@each $num, $margin in $cols
-		.pull-#{$num}
+=make-append()
+	@media (max-width: $screen-sm-max)
+		+make-append-small
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		+make-append-mid
+	@media (min-width: $screen-lg-min)
+		+make-append-large
+
+=make-prepend()
+	@media (max-width: $screen-sm-max)
+		+make-prepend-small
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		+make-prepend-mid
+	@media (min-width: $screen-lg-min)
+		+make-prepend-large
+
+=make-append-small()
+	@for $i from 1 through $grid-columns
+		.append-#{$i}
+			margin-right: percentage(($i % ($grid-columns / 4)) / ($grid-columns / 4))
+
+=make-append-mid()
+	@for $i from 1 through $grid-columns
+		.append-#{$i}
+			margin-right: percentage(($i % ($grid-columns / 2)) / ($grid-columns / 2))
+
+=make-append-large()
+	@for $i from 1 through $grid-columns
+		.append-#{$i}
+			margin-right: percentage($i / $grid-columns)
+
+=make-prepend-small()
+	@for $i from 1 through $grid-columns
+		.prepend-#{$i}
+			margin-left: percentage(($i % ($grid-columns / 4)) / ($grid-columns / 4))
+
+=make-prepend-mid()
+	@for $i from 1 through $grid-columns
+		.prepend-#{$i}
+			margin-left: percentage(($i % ($grid-columns / 2)) / ($grid-columns / 2))
+
+=make-prepend-large()
+	@for $i from 1 through $grid-columns
+		.prepend-#{$i}
+			margin-left: percentage($i / $grid-columns)
+
+//--------------------------------------------------
+// Offset
+//--------------------------------------------------
+=make-offset()
+	+make-pull
+	+make-push
+
+=make-pull()
+	@for $i from 1 through $grid-columns
+		.pull-#{$i}
 			@extend .pull
-			@if $num == 1
-				margin-left: -$margin
-			@else
-				margin-left: -($margin + $gutter)
-		.push-#{$num}
+	@media (max-width: $screen-sm-max)
+		+make-pull-small
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		+make-pull-mid
+	@media (min-width: $screen-lg-min)
+		+make-pull-large
+
+=make-push()
+	@for $i from 1 through $grid-columns
+		.push-#{$i}
 			@extend .push
-			@if $num == 1
-				margin: 0 (-($margin + $gutter)) 0 ($margin + $gutter)
-			@else
-				margin: 0 (-($margin + ($gutter * 2))) 0 ($margin + ($gutter * 2))
+	@media (max-width: $screen-sm-max)
+		+make-push-small
+	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
+		+make-push-mid
+	@media (min-width: $screen-lg-min)
+		+make-push-large
+
+=make-pull-small()
+	@for $i from 1 through $grid-columns
+		.pull-#{$i}
+			margin-left: percentage(($i % ($grid-columns / 4)) / -($grid-columns / 4))
+
+=make-pull-mid()
+	@for $i from 1 through $grid-columns
+		.pull-#{$i}
+			margin-left: percentage(($i % ($grid-columns / 2)) / -($grid-columns / 2))
+
+=make-pull-large()
+	@for $i from 1 through $grid-columns
+		.pull-#{$i}
+			margin-left: percentage($i / -$grid-columns)
+
+=make-push-small()
+	@for $i from 1 through $grid-columns
+		.push-#{$i}
+			margin: 0 percentage(($i % ($grid-columns / 4)) / -($grid-columns / 4)) 0 percentage(($i % ($grid-columns / 4)) / ($grid-columns / 4))
+
+=make-push-mid()
+	@for $i from 1 through $grid-columns
+		.push-#{$i}
+			margin: 0 percentage(($i % ($grid-columns / 2)) / -($grid-columns / 2)) 0 percentage(($i % ($grid-columns / 2)) / ($grid-columns / 2))
+
+=make-push-large()
+	@for $i from 1 through $grid-columns
+		.push-#{$i}
+			margin: 0 percentage($i / -$grid-columns) 0 percentage($i / $grid-columns)

@@ -1,20 +1,21 @@
-/**
- * Destrap Mixins
- *
- * @project 	Destrap
- * @section 	Mixins
- */
+//--------------------------------------------------
+// Destrap Mixins
+//
+// @project Destrap
+// @section Mixins
+//--------------------------------------------------
 
 @import "../mixins/grid-framework"
 
 =border($width: 1px, $style: solid, $color: $grey)
 	border-right: $width $style $color
-	margin-right: $gutter_width / 2
+	margin-right: $gutter-width / 2
 	padding-right: .5625em
 
 =font-size ($size: 16)
 	font-size: ($size / $base)+em
 	margin-bottom: (12 / $size)+em
+	margin-top: (12 / $size)+em
 
 =font-smoothing($type)
 	-webkit-font-smoothing: $type
@@ -26,6 +27,11 @@
 	-webkit-box-sizing: $type
 	-moz-box-sizing: $type
 	box-sizing: $type
+
+=background-clip($type: padding-box)
+	-webkit-background-clip: $type !important
+	-moz-background-clip: $type !important
+	background-clip: $type !important
 
 =border-radius($radius: 4px)
 	-webkit-border-radius: $radius
@@ -45,9 +51,9 @@
 	background-image: -o-linear-gradient($from, $to)
 
 =footer($background)
-	padding: $gutter_width $col_2 $gutter_width $col_4
+	padding: $gutter-width +col(2) $gutter-width +col(4)
 	margin-bottom: 0
-	background: url($background) no-repeat scroll $col_1 center $grey_lighter
+	background: url($background) no-repeat scroll map-get($cols, 1) center $grey-lighter
 
 =clearfix()
 	*zoom: 1

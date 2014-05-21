@@ -1,0 +1,91 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<title>CSS &middot; Destrap</title>
+	<link rel="stylesheet" type="text/css" href="../destrap.css">
+</head>
+<body>
+<header class="page-header">
+	<h1>CSS</h1>
+	<p>Global CSS settings, fundamental HTML elements styled and enhanced with extensible classes, and an advanced grid system.</p>
+</header>
+<section id="overview">
+	<h2>Overview</h2>
+	<p class="lead">Get an overview of the key pieces of Destrap's infrastructure, including our approach to better, faster, stronger web development.</p>
+	<section id="html5-doctype">
+		<h3>HTML5 doctype</h3>
+		<p>Destrap makes use of certain HTML elements and CSS properties that require use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+		<pre>
+&lt;!doctype html>
+&lt;html lang="en">
+...
+&lt;/html>
+		</pre>
+	</section>
+	<section id="typography-overview">
+		<h3>Typography and links</h3>
+		<p>Destrap sets basic global display, typography, and link styles. Specifically, we:</p>
+		<ul>
+			<li>Set <code>background-color: #f7f7f7;</code> on the <code>body</code></li>
+			<li>Set the global link color via <code>$link-color</code> and apply link underlines only on <code>:hover</code></li>
+		</ul>
+		<p>These styles can be found within <code>_scaffolding.sass</code></p>
+	</section>
+	<section id="normalize">
+		<p>For improved cross-browser rendering, we use <a href="#">Normalize.css</a>, a project by <a href="#">Nicolas Gallagher</a> and <a href="#">Jonathan Neal</a>.</p>
+	</section>
+	<section id="containers">
+		<h3>Containers</h3>
+		<p>Easily center a page's contents by wrapping its contents in a <code>.container</code>. Containers set <code>width</code> at various media query breakpoints to match our grid system.</p>
+		<pre>
+&lt;div class="container">
+	...
+&lt;/div>
+		</pre>
+	</section>
+</section><!-- #overview -->
+
+<section id="grid">
+	<h2>Grid system</h2>
+	<p class="lead">Destrap includes a responsive, fluid grid system made up of 12 columns and 20px gutters.</p>
+
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+	<div class="col-1" style="background-color:#ddd;">.col-1</div>
+	<div class="col-1">.col-1</div>
+</section><!-- #grid -->
+
+<section id="typography">
+	<h2>Typography</h2>
+	<section id="headings">
+		<h3>Headings</h3>
+		<p>All HTML headings, <code>&lt;h1></code> through <code>&lt;h6></code>, are properly styled. We provide also <code>.h1</code> through <code>.h6</code> classes for when you wanto to match the font styling of a heading but still want your text to be displayed inline.</p>
+
+		<div class="example">
+			<h1>h1. Destrap heading</h1>
+			<h2>h2. Destrap heading</h2>
+			<h3>h3. Destrap heading</h3>
+			<h4>h4. Destrap heading</h4>
+			<h5>h5. Destrap heading</h5>
+			<h6>h6. Destrap heading</h6>
+			<pre>
+&lt;h1>h1. Destrap heading&lt;/h1>
+&lt;h2>h2. Destrap heading&lt;/h2>
+&lt;h3>h3. Destrap heading&lt;/h3>
+&lt;h4>h4. Destrap heading&lt;/h4>
+&lt;h5>h5. Destrap heading&lt;/h5>
+&lt;h6>h6. Destrap heading&lt;/h6>
+			</pre>
+		</div>
+	</section>
+</section><!-- #typography -->
+</body>
+</html>
