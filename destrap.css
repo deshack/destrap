@@ -198,11 +198,42 @@ th {
  * @project 	Destrap
  * @section 	Scaffolding
  */
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  font-size: 62.5%;
+  -webkit-tap-highlight-color: transparent; }
+
 body {
   background-color: #f7f7f7;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 16px;
+  line-height: 1.5;
   color: #333333; }
+
+input,
+button,
+select,
+textarea {
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit; }
+
+a {
+  color: #dd4814;
+  text-decoration: none; }
+  a:hover, a:focus {
+    color: #bc3d11;
+    text-decoration: underline; }
+  a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px; }
 
 /*
  * Destrap Typography
@@ -210,12 +241,68 @@ body {
  * @project 	Destrap
  * @section 	Typography
  */
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6 {
+h1, h2, h3, h4, h5, h6 {
   font-family: inherit;
   font-weight: 500;
   line-height: 1.1;
   color: inherit; }
+
+small {
+  font-weight: normal;
+  line-height: 1;
+  color: #aea79f; }
+
+h1, h2, h3 {
+  margin-top: 24px;
+  margin-bottom: 12px; }
+  h1 small, h2 small, h3 small {
+    font-size: 65%; }
+
+h4, h5, h6 {
+  margin-top: 12px;
+  margin-bottom: 12px; }
+  h4 small, h5 small, h6 small {
+    font-size: 75%; }
+
+h1 {
+  font-size: 41px; }
+
+h2 {
+  font-size: 34px; }
+
+h3 {
+  font-size: 28px; }
+
+h4 {
+  font-size: 20px; }
+
+h5 {
+  font-size: 16px; }
+
+h6 {
+  font-size: 14px; }
+
+p {
+  margin: 0 0 12px; }
+
+.lead {
+  margin-bottom: 24px;
+  font-size: 18px;
+  font-weight: 300;
+  line-height: 1.4; }
+  @media (min-width: 767px) {
+    .lead {
+      font-size: 24px; } }
+
+small {
+  font-size: 85%; }
+
+cite {
+  font-style: normal; }
+
+mark {
+  background-color: #eca918;
+  padding: 0.2em; }
 
 .col, .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
   -webkit-box-sizing: border-box;
@@ -598,6 +685,7 @@ h1, h2, h3, h4, h5, h6,
 
   .pull-2 {
     margin-left: -66.66667%; }
+
   .pull-3 {
     margin-left: 0%; }
 
@@ -841,7 +929,7 @@ h1, h2, h3, h4, h5, h6,
 .navbar {
   position: relative;
   min-height: 80px;
-  margin-bottom: 22px;
+  margin-bottom: 24px;
   border: 1px solid transparent;
   *zoom: 1; }
   .navbar:before, .navbar:after {

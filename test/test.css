@@ -8,142 +8,146 @@
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-2 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-3 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-4 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-5 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-6 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-7 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-8 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-9 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-10 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 .col-11 {
   background-color: #dddddd;
   border: 1px solid #c4c4c4;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 
 [class*='col-'] .col-1 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-2 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-3 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-4 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-5 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-6 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-7 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-8 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-9 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-10 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
 [class*='col-'] .col-11 {
   background-color: #aea79f;
   border: 1px solid #978e83;
   text-align: center;
-  padding-top: 10px;
-  padding-bottom: 10px; }
+  padding-top: 15px;
+  padding-bottom: 15px; }
+
+.text-highlighted {
+  background-color: #dd4814;
+  color: white; }

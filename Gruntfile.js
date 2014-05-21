@@ -3,11 +3,13 @@ module.exports = function(grunt) {
 		pkg: grunt.file.readJSON('package.json'),
 		sass: {
 			dist: {
-				options: {
-					style: 'expanded'
-				},
 				files: {
 					'destrap.css':'sass/destrap.sass'
+				}
+			},
+			test: {
+				files: {
+					'test/test.css':'test/test.sass'
 				}
 			}
 		},
@@ -16,12 +18,23 @@ module.exports = function(grunt) {
 				'destrap.min.css':'destrap.css'
 			}
 		},
+		jshint: {
+			gruntfile: ['Gruntfile.js']
+		},
 		watch: {
-			css: {
-				files: 'sass/destrap.sass',
-				tasks: ['sass']
+			jshint: {
+				files: 'Gruntfile.js',
+				tasks: ['jshint:gruntfile']
 			},
 			css: {
+				files: 'sass/**/*.sass',
+				tasks: ['sass:dist']
+			},
+			test: {
+				files: ['test/test.sass','sass/partials/_variables.sass'],
+				tasks: ['sass:test']
+			},
+			clean: {
 				files: 'destrap.css',
 				tasks: ['cssmin']
 			}
@@ -32,6 +45,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-jshint');
 	// Setup tasks.
 	grunt.registerTask('deploy', ['sass', 'cssmin']);
 	grunt.registerTask('default', ['watch']);

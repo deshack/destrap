@@ -6,6 +6,7 @@
 //--------------------------------------------------
 
 @import "../mixins/grid-framework"
+@import "../mixins/typography"
 
 =border($width: 1px, $style: solid, $color: $grey)
 	border-right: $width $style $color
@@ -73,3 +74,10 @@
 	-webkit-column-gap: ($gap / $base)+em
 	-moz-column-gap: ($gap / $base)+em
 	column-gap: ($gap / $base)+em
+
+=tab-focus()
+	// Default
+	outline: thin dotted
+	// WebKit
+	outline: 5px auto -webkit-focus-ring-color
+	outline-offset: -2px

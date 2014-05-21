@@ -6,9 +6,47 @@
  */
 
 // Headings
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6
-	font-family: $headings-font-family
-	font-weight: $headings-font-weight
-	line-height: $headings-line-height
-	color: $headings-color
++make-headings
+
+h1, h2, h3
+	margin-top: $line-height-computed
+	margin-bottom: ($line-height-computed / 2)
+
+	small
+		font-size: 65%
+
+h4, h5, h6
+	margin-top: ($line-height-computed / 2)
+	margin-bottom: ($line-height-computed / 2)
+
+	small
+		font-size: 75%
+
++make-headings-font-size
+
+// Body Text
+p
+	margin: 0 0 ($line-height-computed / 2)
+
+.lead
+	margin-bottom: $line-height-computed
+	font-size: floor(($font-size-base * 1.15))
+	font-weight: 300
+	line-height: 1.4
+
+	@media (min-width: $screen-sm-max)
+		font-size: ($font-size-base * 1.5)
+
+// Emphasis & misc
+
+// Ex: 16px base font * 85% = about 13.6px
+small
+	font-size: 85%
+
+// Undo browser default styling
+cite
+	font-style: normal
+
+mark
+	background-color: $warning
+	padding: .2em

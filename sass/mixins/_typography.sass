@@ -1,0 +1,26 @@
+//--------------------------------------------------
+// Destrap Typography Mixins
+//
+// @project Destrap
+// @section Typography Mixins
+//--------------------------------------------------
+
+=make-headings()
+	$list: "h1"
+	@for $i from (1+1) through 6
+		$list: "#{$list}, h#{$i}"
+	#{$list}
+		font-family: $headings-font-family
+		font-weight: $headings-font-weight
+		line-height: $headings-line-height
+		color: $headings-color
+
+	small
+		font-weight: normal
+		line-height: 1
+		color: $headings-small-color
+
+=make-headings-font-size()
+	@each $i, $size in $font-size-h
+		h#{$i}
+			font-size: $size
