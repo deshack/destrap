@@ -19,20 +19,28 @@ $grey:				#dddddd !default
 $grey-light:		#c2c2c2 !default
 $grey-lighter:		#f7f7f7 !default
 
-// Define base color
-$base-color:		$orange !default
-
+// Body background
 $body-bg:			$grey-lighter !default
 
 // Status
-$error:				#df382c !default
-$warning:			#eca918 !default
+$primary:			$orange
 $success:			#38b44a !default
 $info:				#19b6ee !default
+$warning:			#eca918 !default
+$error:				#df382c !default
 $disabled:			$grey-warm !default
 
+// Inverted colors
+// Use to make contrast with status colors
+$primary-inverted:	#fff !default
+$success-inverted:	#fff !default
+$info-inverted:		#fff !default
+$warning-inverted:	$grey-dark !default
+$error-inverted:	#fff !default
+$disabled-inverted:	#000 !default
+
 // Links
-$link-color:		$base-color !default
+$link-color:		$primary !default
 $link-hover-color:	darken($link-color, 7%) !default
 
 //--------------------------------------------------

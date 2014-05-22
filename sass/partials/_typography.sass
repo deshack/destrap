@@ -50,3 +50,53 @@ cite
 mark
 	background-color: $warning
 	padding: .2em
+
+// Alignment
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+.text-center
+	text-align: center
+.text-justify
+	text-align: justify
+
+// Contextual colors
++text-emphasis-variant('.text-muted', $disabled)
++text-emphasis-variant('.text-primary', $primary)
++text-emphasis-variant('.text-success', $success)
++text-emphasis-variant('.text-info', $info)
++text-emphasis-variant('.text-warning', $warning)
++text-emphasis-variant('.text-error', $error)
+
++bg-variant('.bg-primary', $primary)
++bg-variant('.bg-success', $success)
++bg-variant('.bg-info', $info)
++bg-variant('.bg-warning', $warning)
++bg-variant('.bg-error', $error)
+
+// Misc
+
+// Abbreviations and acronyms
+abbr[title]
+	cursor: help
+	border-bottom: 1px dotted $text-color
+
+// Addresses
+address
+	margin-bottom: $line-height-computed
+	font-style: normal
+	line-height: $line-height-base
+
+// Dashicons placeholder
+%dashicons
+	display: inline-block
+	font-family: "dashicons"
+	text-decoration: none
+	font-weight: normal
+	font-style: normal
+	vertical-align: top
+	text-align: center
+	+transition(color .1s ease-in 0)
+	+font-smoothing(antialiased)
+	-moz-osx-font-smoothing: greyscale

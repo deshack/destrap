@@ -43,3 +43,21 @@ a
 
 	&:focus
 		+tab-focus
+
+	// Let's be creative, style email links!
+	&[href^="mailto"]:before
+		content: "\f466\00a0"
+		@extend %dashicons
+
+// Images
+img
+	vertical-align: middle
+
+// Ensure images don't scale beyond their parents
+.img-responsive
+	+img-responsive
+
+// Rounded corners
+.img-rounded
+	+border-radius(6px)
+

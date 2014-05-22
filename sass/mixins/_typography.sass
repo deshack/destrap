@@ -15,12 +15,36 @@
 		line-height: $headings-line-height
 		color: $headings-color
 
-	small
-		font-weight: normal
-		line-height: 1
-		color: $headings-small-color
+		small
+			font-weight: normal
+			line-height: 1
+			color: $headings-small-color
 
 =make-headings-font-size()
 	@each $i, $size in $font-size-h
 		h#{$i}
 			font-size: $size
+
+=text-emphasis-variant($parent, $color)
+	#{$parent}
+		color: $color
+	a#{$parent}:hover
+		color: darken($color, 10%)
+
+=bg-variant($parent, $color)
+	#{$parent}
+		background-color: $color
+		@if ($color == $primary)
+			color: $primary-inverted
+		@else if ($color == $success)
+			color: $success-inverted
+		@else if ($color == $info)
+			color: $info-inverted
+		@else if ($color == $warning)
+			color: $warning-inverted
+		@else if ($color == $error)
+			color: $error-inverted
+		@else
+			@warn "Unable to find inverted color for #{$color}."
+	a#{$parent}:hover
+		background-color: darken($color, 10%)

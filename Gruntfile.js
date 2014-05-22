@@ -18,6 +18,14 @@ module.exports = function(grunt) {
 				'destrap.min.css':'destrap.css'
 			}
 		},
+		csslint: {
+			dist: {
+				src: ['destrap.css']
+			},
+			test: {
+				src: ['test/test.css']
+			}
+		},
 		jshint: {
 			gruntfile: ['Gruntfile.js']
 		},
@@ -33,10 +41,6 @@ module.exports = function(grunt) {
 			test: {
 				files: ['test/test.sass','sass/partials/_variables.sass'],
 				tasks: ['sass:test']
-			},
-			clean: {
-				files: 'destrap.css',
-				tasks: ['cssmin']
 			}
 		}
 	});
@@ -45,8 +49,10 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-cssmin');
+	grunt.loadNpmTasks('grunt-contrib-csslint');
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	// Setup tasks.
-	grunt.registerTask('deploy', ['sass', 'cssmin']);
+	grunt.registerTask('deploy', ['sass', 'csslint:dist', 'cssmin']);
+	grunt.registerTask('check', ['csslint', 'jshint']);
 	grunt.registerTask('default', ['watch']);
-}
+};

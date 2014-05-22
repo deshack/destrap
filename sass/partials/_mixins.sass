@@ -7,11 +7,7 @@
 
 @import "../mixins/grid-framework"
 @import "../mixins/typography"
-
-=border($width: 1px, $style: solid, $color: $grey)
-	border-right: $width $style $color
-	margin-right: $gutter-width / 2
-	padding-right: .5625em
+@import "../mixins/images"
 
 =font-size ($size: 16)
 	font-size: ($size / $base)+em
@@ -28,6 +24,13 @@
 	-webkit-box-sizing: $type
 	-moz-box-sizing: $type
 	box-sizing: $type
+
+=transition($transition)
+	-webkit-transition: $transition
+	-moz-transition: $transition
+	-o-transition: $transition
+	-ms-transition: $transition
+	transition: $transition
 
 =background-clip($type: padding-box)
 	-webkit-background-clip: $type !important

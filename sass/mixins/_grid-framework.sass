@@ -10,7 +10,7 @@
 =make-grid-columns()
 	@for $i from 1 through $grid-columns
 		.col-#{$i}
-			@extend .col
+			@extend %col
 	@media (max-width: $screen-sm-max)
 		+make-grid-columns-small
 	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
@@ -115,7 +115,7 @@
 =make-pull()
 	@for $i from 1 through $grid-columns
 		.pull-#{$i}
-			@extend .pull
+			@extend %offset
 	@media (max-width: $screen-sm-max)
 		+make-pull-small
 	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)
@@ -126,7 +126,7 @@
 =make-push()
 	@for $i from 1 through $grid-columns
 		.push-#{$i}
-			@extend .push
+			@extend %offset
 	@media (max-width: $screen-sm-max)
 		+make-push-small
 	@media (min-width: $screen-md-min) and (max-width: $screen-md-max)

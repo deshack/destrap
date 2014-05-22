@@ -1,0 +1,31 @@
+{
+  "name": "destrap",
+  "version": "0.1.0",
+  "authors": [
+    "Mattia Migliorini <deshack@ubuntu.com>"
+  ],
+  "description": "Simple and responsive Front-End Framework written in SASSN.",
+  "main": "destrap.css",
+  "moduleType": [
+    "node"
+  ],
+  "keywords": [
+    "frontend",
+    "framework",
+    "sass",
+    "css"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/deshack/destrap",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "dashicons": "~3.9.1"
+  }
+}
