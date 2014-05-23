@@ -1,6 +1,6 @@
 {
   "name": "destrap",
-  "version": "0.1.0",
+  "version": "0.2.0-dev",
   "description": "Simple and responsive Front-End Framework written in SASS.",
   "main": "destrap.css",
   "directories": {
