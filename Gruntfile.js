@@ -39,7 +39,7 @@ module.exports = function(grunt) {
 				tasks: ['sass:dist']
 			},
 			test: {
-				files: ['test/test.sass','sass/partials/_variables.sass'],
+				files: ['test/test.sass','sass/partials/_variables.sass', 'sass/partials/_mixins.sass'],
 				tasks: ['sass:test']
 			}
 		}

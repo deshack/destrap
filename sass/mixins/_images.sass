@@ -7,7 +7,28 @@
 
 // Responsive image
 // Keep images from scaling beyond the width of their parents.
-=img-responsive($display: block)
+=img-responsive($display: inline-block)
 	display: $display
 	max-width: 100%
 	height: auto
+
+// Thumbnails
+=thumbnail
+	display: inline-block
+	padding: 4px
+	margin-bottom: $line-height-computed
+	line-height: $line-height-base
+	background-color: $body-bg
+	border: 1px solid $gray
+	+border-radius
+	+transition(all .2s ease-in-out)
+
+	> img,
+	a > img
+		+img-responsive
+		margin-left: auto
+		margin-right: auto
+
+	.caption
+		padding: ($line-height-computed / 3)
+		color: $text-color

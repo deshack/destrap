@@ -151,3 +151,28 @@
 .text-highlighted {
   background-color: #dd4814;
   color: white; }
+
+.example {
+  position: relative;
+  border: 1px solid #dddddd;
+  padding: 48px 24px 24px;
+  margin: 0 0 12px;
+  background-color: white;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px; }
+  .example:after {
+    content: "Example";
+    position: absolute;
+    top: 16px;
+    left: 24px;
+    font-size: 12px;
+    font-weight: 700;
+    color: #aea79f;
+    text-transform: uppercase;
+    letter-spacing: 1px; }
+  .example > address,
+  .example > blockquote {
+    margin-bottom: 0; }
+  .example > img {
+    margin: 5px; }

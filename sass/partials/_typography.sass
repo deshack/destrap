@@ -5,6 +5,19 @@
  * @section 	Typography
  */
 
+// Dashicons placeholder
+%dashicons
+	display: inline-block
+	font-family: "dashicons"
+	text-decoration: none
+	font-weight: normal
+	font-style: normal
+	vertical-align: top
+	text-align: center
+	+transition(color .1s ease-in 0)
+	+font-smoothing(antialiased)
+	-moz-osx-font-smoothing: grayscale
+
 // Headings
 +make-headings
 
@@ -69,11 +82,11 @@ mark
 +text-emphasis-variant('.text-warning', $warning)
 +text-emphasis-variant('.text-error', $error)
 
-+bg-variant('.bg-primary', $primary)
-+bg-variant('.bg-success', $success)
-+bg-variant('.bg-info', $info)
-+bg-variant('.bg-warning', $warning)
-+bg-variant('.bg-error', $error)
++bg-variant('.bg-primary', $primary, $primary-inverted)
++bg-variant('.bg-success', $success, $success-inverted)
++bg-variant('.bg-info', $info, $info-inverted)
++bg-variant('.bg-warning', $warning, $warning-inverted)
++bg-variant('.bg-error', $error, $error-inverted)
 
 // Misc
 
@@ -88,15 +101,29 @@ address
 	font-style: normal
 	line-height: $line-height-base
 
-// Dashicons placeholder
-%dashicons
-	display: inline-block
-	font-family: "dashicons"
-	text-decoration: none
-	font-weight: normal
-	font-style: normal
-	vertical-align: top
-	text-align: center
-	+transition(color .1s ease-in 0)
-	+font-smoothing(antialiased)
-	-moz-osx-font-smoothing: greyscale
+// Blockquotes
+blockquote
+	padding: ($line-height-computed / 2) $line-height-computed
+	margin: 0 0 $line-height-computed
+	font-size: ($font-size-base * 1.25)
+	border-left: 5px solid $gray-warm
+
+	&:before
+		content: "\f122"
+		@extend %dashicons
+
+	p,
+	ul,
+	ol
+		&:last-child
+			margin-bottom: 0
+
+	footer
+		display: block
+		font-size: 80% // Back to default font-size
+		line-height: $line-height-base
+		color: $gray-warm
+
+		&:before
+			// em dash, nbsp
+			content: "\2014 \00a0"

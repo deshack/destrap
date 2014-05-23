@@ -10,15 +10,15 @@
 	@for $i from (1+1) through 6
 		$list: "#{$list}, h#{$i}"
 	#{$list}
-		font-family: $headings-font-family
-		font-weight: $headings-font-weight
-		line-height: $headings-line-height
-		color: $headings-color
+		font-family: inherit
+		font-weight: 500
+		line-height: 1.1
+		color: inherit
 
 		small
 			font-weight: normal
 			line-height: 1
-			color: $headings-small-color
+			color: $gray-warm
 
 =make-headings-font-size()
 	@each $i, $size in $font-size-h
@@ -31,20 +31,9 @@
 	a#{$parent}:hover
 		color: darken($color, 10%)
 
-=bg-variant($parent, $color)
+=bg-variant($parent, $bg, $color)
 	#{$parent}
-		background-color: $color
-		@if ($color == $primary)
-			color: $primary-inverted
-		@else if ($color == $success)
-			color: $success-inverted
-		@else if ($color == $info)
-			color: $info-inverted
-		@else if ($color == $warning)
-			color: $warning-inverted
-		@else if ($color == $error)
-			color: $error-inverted
-		@else
-			@warn "Unable to find inverted color for #{$color}."
+		background-color: $bg
+		color: $color
 	a#{$parent}:hover
-		background-color: darken($color, 10%)
+		background-color: darken($bg, 10%)

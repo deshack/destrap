@@ -1,0 +1,52 @@
+//--------------------------------------------------
+// Destrap Code
+//
+// @project Destrap
+// @section Code
+//--------------------------------------------------
+
+%code
+	font-family: $font-family-monospace
+	padding: 2px 4px
+	font-size: 90%
+	+border-radius
+
+// Inline code
+code
+	@extend %code
+	color: $code-color
+	background-color: $code-bg
+
+// User input (keyboard)
+kbd
+	@extend %code
+	color: $kbd-color
+	background-color: $kbd-bg
+	+box-shadow(inset 0 -1px 0 rgba(0,0,0,.25))
+
+pre
+	@extend %code
+	display: block
+	padding: (($line-height-computed -1) / 2)
+	margin: 0 0 ($line-height-computed / 2)
+	font-size: ($font-size-base - 1) // 16px to 15px
+	line-height: $line-height-base
+	word-break: break-all
+	word-wrap: break-word
+	color: $pre-color
+	background-color: $pre-bg
+	border: 1px solid $pre-border-color
+
+	// Account for some code outputs that place code tags in pre tags
+	code
+		padding: 0
+		font-size: inherit
+		color: inherit
+		white-space: pre-wrap
+		background-color: transparent
+		+border-radius(0)
+
+	// Enable scrollable blocks of code
+	.pre-scrollable
+		max-height: $pre-max-height
+		overflow-y: scroll

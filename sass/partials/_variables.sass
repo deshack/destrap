@@ -13,14 +13,14 @@
 // @colordef standard colors
 $orange:			#dd4814 !default
 $orange-light:		#fdf6f2 !default
-$grey-dark:			#333333 !default
-$grey-warm:			#aea79f !default
-$grey:				#dddddd !default
-$grey-light:		#c2c2c2 !default
-$grey-lighter:		#f7f7f7 !default
+$gray-dark:			#333333 !default
+$gray-warm:			#aea79f !default
+$gray:				#dddddd !default
+$gray-light:		#c2c2c2 !default
+$gray-lighter:		#f7f7f7 !default
 
 // Body background
-$body-bg:			$grey-lighter !default
+$body-bg:			$gray-lighter !default
 
 // Status
 $primary:			$orange
@@ -28,20 +28,32 @@ $success:			#38b44a !default
 $info:				#19b6ee !default
 $warning:			#eca918 !default
 $error:				#df382c !default
-$disabled:			$grey-warm !default
+$disabled:			$gray-warm !default
 
 // Inverted colors
 // Use to make contrast with status colors
 $primary-inverted:	#fff !default
 $success-inverted:	#fff !default
 $info-inverted:		#fff !default
-$warning-inverted:	$grey-dark !default
+$warning-inverted:	$gray-dark !default
 $error-inverted:	#fff !default
 $disabled-inverted:	#000 !default
 
 // Links
 $link-color:		$primary !default
 $link-hover-color:	darken($link-color, 7%) !default
+
+// Code
+$code-color:			#c7254e !default
+$code-bg:				#f9f2f4 !default
+
+$kbd-color:				#fff !default
+$kbd-bg:				$gray-dark !default
+
+$pre-bg:				#f5f5f5 !default
+$pre-color:				$gray-dark !default
+$pre-border-color:		#ccc !default
+$pre-max-height:		340px !default
 
 //--------------------------------------------------
 // Typography
@@ -64,20 +76,12 @@ $font-size-h6:			ceil(($font-size-base * 0.85)) !default
 
 $font-size-h:			(1: $font-size-h1, 2: $font-size-h2, 3: $font-size-h3, 4: $font-size-h4, 5: $font-size-h5, 6: $font-size-h6)
 
-$text-color:			$grey-dark !default
+$text-color:			$gray-dark !default
 
 // Unit-less line-height for use in components like buttons.
 $line-height-base:		1.5 !default
 // Computed line-height (~24px) for use with margin, padding, etc.
 $line-height-computed:	floor(($font-size-base * $line-height-base)) !default
-
-// Headings
-$headings-font-family:	inherit !default
-$headings-font-weight:	500 !default
-$headings-line-height:	1.1 !default
-$headings-color:		inherit !default
-
-$headings-small-color:	$grey-warm !default
 
 //--------------------------------------------------
 // Grid
