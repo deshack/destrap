@@ -5,8 +5,104 @@
  * @section 	Scaffolding
  */
 
+// Reset the box-sizing
+*,
+*:before,
+*:after
+	+box-sizing
+
+html
+	font-size: 62.5%
+	-webkit-tap-highlight-color: rgba(0,0,0,0)
+
 body
 	background-color: $body-bg
 	font-family: $font-family-base
 	font-size: $font-size-base
+	line-height: $line-height-base
 	color: $text-color
+
+// Reset fonts for relevant elements
+input,
+button,
+select,
+textarea
+	font-family: inherit
+	font-size: inherit
+	line-height: inherit
+
+// Links
+a
+	color: $link-color
+	text-decoration: none
+
+	&:hover,
+	&:focus
+		color: $link-hover-color
+		text-decoration: underline
+
+	&:focus
+		+tab-focus
+
+	// Let's be creative, style email links!
+	&[href^="mailto"]:before
+		content: "\f466\00a0"
+		@extend %dashicons
+
+// Images
+img
+	vertical-align: middle
+	// Ensure images don't scale beyond their parents
+	+img-responsive
+
+// Rounded corners
+.img-rounded
+	+border-radius(6px)
+
+// Perfect circle
+.img-circle
+	+border-radius(50%) // Set radius in percents
+
+// Image thumbnails
+.thumbnail
+	+thumbnail
+
+a.thumbnail:hover,
+a.thumbnail:focus,
+a.thumbnail:active,
+a.thumbnail.active
+	color: $link-color
+
+// Horizontal line
+hr
+	margin-top: $line-height-computed
+	margin-bottom: $line-height-computed
+	border: 0
+	border-top: 1px solid $gray
+
+// Only display content to screen readers
+// See http://a11yproject.com/posts/how-to-hide-content/
+.sr-only
+	position: absolute
+	width: 1px
+	height: 1px
+	margin: -1px
+	padding: 0
+	overflow: hidden
+	clip: rect(0 0 0 0) // IE6, IE7
+	clip: rect(0,0,0,0)
+	border: 0
+
+	// Use in conjunction with .sr-only to only display content when it's focused.
+	// Useful for "Skip to main content" links.
+	// See http://www.w3.org/TR/2013/NOTE-WCAG20-TECHS-20130905/G1
+	// Credit: HTML5 Boilerplate
+	&.focusable
+		&:active,
+		&:focus
+			position: static
+			width: auto
+			height: auto
+			margin: 0
+			overflow: visible
+			clip: auto

@@ -1,0 +1,451 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Tables Test &middot; Destrap</title>
+	<link rel="stylesheet" type="text/css" href="../destrap.css">
+	<link rel="stylesheet" type="text/css" href="test.css">
+</head>
+<body>
+<div class="container">
+	<header>
+		<h1 class="page-title">Tables</h1>
+	</header>
+	<section id="base">
+		<h2>Basic tables</h2>
+		<p><strong>Note:</strong> Chrome and Firefox automatically add a <code>tbody</code> tag.</p>
+		<div class="example">
+			<table>
+				<tr>
+					<td>First cell</td>
+					<td>Second cell</td>
+					<td>Third cell</td>
+				</tr>
+				<tr>
+					<td>Second row</td>
+					<td>Second row</td>
+					<td>Second row</td>
+				</tr>
+			</table>
+		</div>
+	</section><!-- #base -->
+	<section id="header">
+		<h2>Table header</h2>
+		<div class="example">
+			<table>
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</section><!-- #header -->
+	<section id="footer">
+		<h2>Table footer</h2>
+		<div class="example">
+			<table>
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #footer -->
+	<section id="caption">
+		<h2>Table caption</h2>
+		<div class="example">
+			<table>
+				<caption>Table caption</caption>
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #caption -->
+	<section id="colgroup">
+		<h2>Table colgroup</h2>
+		<div class="example">
+			<table>
+				<colgroup>
+					<col style="background-color: red">
+					<col style="background-color: yellow">
+					<col style="background-color: green">
+				</colgroup>
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #colgroup -->
+	<section id="condensed">
+		<h2>Table condensed</h2>
+		<div class="example">
+			<table class="condensed">
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #condensed -->
+	<section id="striped">
+		<h2>Table striped</h2>
+		<div class="example">
+			<table class="striped">
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #striped -->
+	<section id="hover">
+		<h2>Table hover</h2>
+		<div class="example">
+			<table class="hover">
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #hover -->
+	<section id="nested">
+		<h2>Nested tables</h2>
+		<div class="example">
+			<table>
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr>
+						<td>Cell</td>
+						<td>
+							<table>
+								<tbody>
+									<tr>
+										<td>Nested</td>
+										<td>Nested</td>
+										<td>Nested</td>
+									</tr>
+								</tbody>
+							</table>
+						</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #nested -->
+	<section id="variants">
+		<h2>Contextual row variants</h2>
+		<div class="example">
+			<table class="hover">
+				<thead>
+					<tr>
+						<th>Heading</th>
+						<th>Heading</th>
+						<th>Heading</th>
+					</tr>
+				</thead>
+				<tbody>
+					<tr class="active">
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr class="success">
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr class="info">
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr class="warning">
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+					<tr class="error">
+						<td>Cell</td>
+						<td>Cell</td>
+						<td>Cell</td>
+					</tr>
+				</tbody>
+				<tfoot>
+					<tr>
+						<td>Footer</td>
+						<td>Footer</td>
+						<td>Footer</td>
+					</tr>
+				</tfoot>
+			</table>
+		</div>
+	</section><!-- #variants -->
+	<section id="responsive">
+		<h2>Table responsive</h2>
+		<p>There's no way to achieve this behavior directly on table. We need a wrapper, that's all.</p>
+		<div class="example">
+			<div class="table-responsive">
+				<table>
+					<thead>
+						<tr>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+							<th>Heading</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+						</tr>
+						<tr>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+							<td>Lorem ipsum dolor sit amet</td>
+						</tr>
+					</tbody>
+					<tfoot>
+						<tr>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td>Footer</td>
+							<td>Footer</td>
+						</tr>
+					</tfoot>
+				</table>
+			</div>
+		</div>
+	</section><!-- #responsive -->
+</div><!-- .container -->
+</body>
+</html>

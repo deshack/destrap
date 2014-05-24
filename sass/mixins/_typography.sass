@@ -1,0 +1,42 @@
+//--------------------------------------------------
+// Destrap Typography Mixins
+//
+// @project Destrap
+// @section Typography Mixins
+//--------------------------------------------------
+
+=make-headings()
+	$list: "h1"
+	@for $i from (1+1) through 6
+		$list: "#{$list}, h#{$i}"
+	#{$list}
+		font-family: inherit
+		font-weight: 500
+		line-height: 1.1
+		color: inherit
+
+		small
+			font-weight: normal
+			line-height: 1
+			color: $gray-warm
+
+=make-headings-font-size()
+	@each $i, $size in $font-size-h
+		h#{$i}
+			font-size: $size
+
+=text-emphasis-variant($parent, $color)
+	#{$parent}
+		color: $color
+	a#{$parent}:hover
+		color: darken($color, 10%)
+
+=bg-variant($parent, $bg, $color)
+	#{$parent}
+		background-color: $bg
+		color: $color
+		font-size: 90%
+		+border-radius
+		padding: 2px 4px
+	a#{$parent}:hover
+		background-color: darken($bg, 10%)

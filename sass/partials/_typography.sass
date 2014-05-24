@@ -5,10 +5,131 @@
  * @section 	Typography
  */
 
+// Dashicons placeholder
+%dashicons
+	display: inline-block
+	font-family: "dashicons"
+	text-decoration: none
+	font-weight: normal
+	font-style: normal
+	vertical-align: top
+	text-align: center
+	+transition(color .1s ease-in 0)
+	+font-smoothing(antialiased)
+	-moz-osx-font-smoothing: grayscale
+
 // Headings
-h1, h2, h3, h4, h5, h6,
-.h1, .h2, .h3, .h4, .h5, .h6
-	font-family: $headings-font-family
-	font-weight: $headings-font-weight
-	line-height: $headings-line-height
-	color: $headings-color
++make-headings
+
+h1, h2, h3
+	margin-top: $line-height-computed
+	margin-bottom: ($line-height-computed / 2)
+
+	small
+		font-size: 65%
+
+h4, h5, h6
+	margin-top: ($line-height-computed / 2)
+	margin-bottom: ($line-height-computed / 2)
+
+	small
+		font-size: 75%
+
++make-headings-font-size
+
+// Page title
+.page-title
+	background-color: $gray
+	padding: $line-height-computed ($line-height-computed / 2)
+	+border-radius
+
+// Body Text
+p
+	margin: 0 0 ($line-height-computed / 2)
+
+.lead
+	margin-bottom: $line-height-computed
+	font-size: floor(($font-size-base * 1.15))
+	font-weight: 300
+	line-height: 1.4
+
+	@media (min-width: $screen-sm-max)
+		font-size: ($font-size-base * 1.5)
+
+// Emphasis & misc
+
+// Ex: 16px base font * 85% = about 13.6px
+small
+	font-size: 85%
+
+// Undo browser default styling
+cite
+	font-style: normal
+
+mark
+	background-color: $warning
+	padding: .2em
+
+// Alignment
+.text-left
+	text-align: left
+.text-right
+	text-align: right
+.text-center
+	text-align: center
+.text-justify
+	text-align: justify
+
+// Contextual colors
++text-emphasis-variant('.text-muted', $disabled)
++text-emphasis-variant('.text-primary', $primary)
++text-emphasis-variant('.text-success', $success)
++text-emphasis-variant('.text-info', $info)
++text-emphasis-variant('.text-warning', $warning)
++text-emphasis-variant('.text-error', $error)
+
++bg-variant('.bg-primary', $primary, $primary-inverted)
++bg-variant('.bg-success', $success, $success-inverted)
++bg-variant('.bg-info', $info, $info-inverted)
++bg-variant('.bg-warning', $warning, $warning-inverted)
++bg-variant('.bg-error', $error, $error-inverted)
+
+// Misc
+
+// Abbreviations and acronyms
+abbr[title]
+	cursor: help
+	border-bottom: 1px dotted $text-color
+
+// Addresses
+address
+	margin-bottom: $line-height-computed
+	font-style: normal
+	line-height: $line-height-base
+
+// Blockquotes
+blockquote
+	padding: ($line-height-computed / 2) $line-height-computed
+	margin: 0 0 $line-height-computed
+	font-size: ($font-size-base * 1.25)
+	border-left: 5px solid $gray-warm
+
+	&:before
+		content: "\f122"
+		@extend %dashicons
+
+	p,
+	ul,
+	ol
+		&:last-child
+			margin-bottom: 0
+
+	footer
+		display: block
+		font-size: 80% // Back to default font-size
+		line-height: $line-height-base
+		color: $gray-warm
+
+		&:before
+			// em dash, nbsp
+			content: "\2014 \00a0"

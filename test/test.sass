@@ -1,6 +1,7 @@
 @import "../sass/partials/variables"
+@import "../sass/partials/mixins"
 
-=make-grid-background($color: $grey)
+=make-grid-background($color: $gray)
 	@for $i from 1 to $grid-columns
 		.col-#{$i}
 			background-color: $color
@@ -12,4 +13,33 @@
 +make-grid-background
 
 [class*='col-']
-	+make-grid-background($grey-warm)
+	+make-grid-background($gray-warm)
+
+.text-highlighted
+	background-color: $primary
+	color: #fff
+
+.example
+	position: relative
+	border: 1px solid $gray
+	padding: ($line-height-computed * 2) $line-height-computed $line-height-computed
+	margin: 0 0 ($line-height-computed / 2)
+	background-color: #fff
+	+border-radius
+
+	&:after
+		content: "Example"
+		position: absolute
+		top: ($line-height-computed / 1.5)
+		left: $line-height-computed
+		font-size: 12px
+		font-weight: 700
+		color: $gray-warm
+		text-transform: uppercase
+		letter-spacing: 1px
+
+	> address,
+	> blockquote
+		margin-bottom: 0
+	> img
+		margin: 5px

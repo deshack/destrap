@@ -6,11 +6,9 @@
 //--------------------------------------------------
 
 @import "../mixins/grid-framework"
-
-=border($width: 1px, $style: solid, $color: $grey)
-	border-right: $width $style $color
-	margin-right: $gutter-width / 2
-	padding-right: .5625em
+@import "../mixins/typography"
+@import "../mixins/images"
+@import "../mixins/tables"
 
 =font-size ($size: 16)
 	font-size: ($size / $base)+em
@@ -27,6 +25,13 @@
 	-webkit-box-sizing: $type
 	-moz-box-sizing: $type
 	box-sizing: $type
+
+=transition($transition)
+	-webkit-transition: $transition
+	-moz-transition: $transition
+	-o-transition: $transition
+	-ms-transition: $transition
+	transition: $transition
 
 =background-clip($type: padding-box)
 	-webkit-background-clip: $type !important
@@ -53,7 +58,7 @@
 =footer($background)
 	padding: $gutter-width +col(2) $gutter-width +col(4)
 	margin-bottom: 0
-	background: url($background) no-repeat scroll map-get($cols, 1) center $grey-lighter
+	background: url($background) no-repeat scroll map-get($cols, 1) center $gray-lighter
 
 =clearfix()
 	*zoom: 1
@@ -73,3 +78,10 @@
 	-webkit-column-gap: ($gap / $base)+em
 	-moz-column-gap: ($gap / $base)+em
 	column-gap: ($gap / $base)+em
+
+=tab-focus()
+	// Default
+	outline: thin dotted
+	// WebKit
+	outline: 5px auto -webkit-focus-ring-color
+	outline-offset: -2px

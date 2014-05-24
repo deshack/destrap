@@ -13,27 +13,47 @@
 // @colordef standard colors
 $orange:			#dd4814 !default
 $orange-light:		#fdf6f2 !default
-$grey-dark:			#333333 !default
-$grey-warm:			#aea79f !default
-$grey:				#dddddd !default
-$grey-light:		#c2c2c2 !default
-$grey-lighter:		#f7f7f7 !default
+$gray-dark:			#333333 !default
+$gray-warm:			#aea79f !default
+$gray:				#dddddd !default
+$gray-light:		#c2c2c2 !default
+$gray-lighter:		#f7f7f7 !default
 
-// Define base color
-$base-color:		$orange !default
-
-$body-bg:			$grey-lighter !default
-$text-color:		$grey-dark !default
+// Body background
+$body-bg:			$gray-lighter !default
 
 // Status
-$error:				#df382c !default
-$warning:			#eca918 !default
+$primary:			$orange
 $success:			#38b44a !default
 $info:				#19b6ee !default
-$disabled:			$grey-warm !default
+$warning:			#eca918 !default
+$error:				#df382c !default
+$disabled:			$gray-warm !default
+
+// Inverted colors
+// Use to make contrast with status colors
+$primary-inverted:	#fff !default
+$success-inverted:	#fff !default
+$info-inverted:		#fff !default
+$warning-inverted:	$gray-dark !default
+$error-inverted:	#fff !default
+$disabled-inverted:	#000 !default
 
 // Links
-$link-color:		$base-color !default
+$link-color:		$primary !default
+$link-hover-color:	darken($link-color, 7%) !default
+
+// Code
+$code-color:			#c7254e !default
+$code-bg:				#f9f2f4 !default
+
+$kbd-color:				#fff !default
+$kbd-bg:				$gray-dark !default
+
+$pre-bg:				#f5f5f5 !default
+$pre-color:				$gray-dark !default
+$pre-border-color:		#ccc !default
+$pre-max-height:		340px !default
 
 //--------------------------------------------------
 // Typography
@@ -43,19 +63,25 @@ $link-color:		$base-color !default
 $font-family-base:		"Helvetica Neue", Helvetica, Arial, sans-serif !default
 $font-family-monospace:	Menlo, Monaco, Consolas, "Courier New", monospace !default
 
-$base:					16 !default
-$font-size-base:		($base)+px !default
+$font-size-base:		16px !default
+$font-size-large:		ceil(($font-size-base * 1.25)) !default
+$font-size-small:		ceil(($font-size-base * 0.85)) !default
 
-// Unit-less line-height (20/14) for use in components like buttons.
-$line-height-base:		1.428571429 !default
-// Computed line-height (~20px) for use with margin, padding, etc.
-$line-height-computed:	floor(($base * $line-height-base))+px !default
+$font-size-h1:			floor(($font-size-base * 2.6)) !default
+$font-size-h2:			floor(($font-size-base * 2.15)) !default
+$font-size-h3:			ceil(($font-size-base * 1.7)) !default
+$font-size-h4:			ceil(($font-size-base * 1.25)) !default
+$font-size-h5:			$font-size-base !default
+$font-size-h6:			ceil(($font-size-base * 0.85)) !default
 
-// Headings
-$headings-font-family:	inherit !default
-$headings-font-weight:	500 !default
-$headings-line-height:	1.1 !default
-$headings-color:		inherit !default
+$font-size-h:			(1: $font-size-h1, 2: $font-size-h2, 3: $font-size-h3, 4: $font-size-h4, 5: $font-size-h5, 6: $font-size-h6)
+
+$text-color:			$gray-dark !default
+
+// Unit-less line-height for use in components like buttons.
+$line-height-base:		1.5 !default
+// Computed line-height (~24px) for use with margin, padding, etc.
+$line-height-computed:	floor(($font-size-base * $line-height-base)) !default
 
 //--------------------------------------------------
 // Grid
@@ -80,3 +106,15 @@ $screen-lg-min:			1024px !default
 
 $navbar-height:			80px !default
 $navbar-margin-bottom:	$line-height-computed !default
+
+//--------------------------------------------------
+// Tables
+//--------------------------------------------------
+
+$table-cell-padding:	8px !default
+$table-border-color:	$gray-light !default
+
+$table-success:			lighten($success, 15%) !default
+$table-info:			lighten($info, 15%) !default
+$table-warning:			lighten($warning, 15%) !default
+$table-error:			lighten($error, 15%) !default
