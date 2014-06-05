@@ -4,7 +4,7 @@
   "authors": [
     "Mattia Migliorini <deshack@ubuntu.com>"
   ],
-  "description": "Simple and responsive Front-End Framework written in SASSN.",
+  "description": "Simple and responsive Front-End Framework written in SASS.",
   "main": "destrap.css",
   "moduleType": [
     "node"
